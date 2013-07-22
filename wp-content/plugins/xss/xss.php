@@ -24,6 +24,7 @@ require_once( ABSPATH . 'wp-includes/pluggable.php' );
 
 $table_name = $table_prefix . 'xss';
 
+
 if( startsWith( $km_uri, '/save' ) ){
     global $current_user;
     get_currentuserinfo();
@@ -77,7 +78,7 @@ if( startsWith( $km_uri, '/read' ) ){
             'code' => 200,
             'comments' => $comments,
             'now' => time(),
-            'sql' => "SELECT user, comment FROM $table_name where time > '$date' LIMIT 30",
+            // 'sql' => "SELECT user, comment FROM $table_name where time > '$date' LIMIT 30",
             'after' => $after
         ));
 
