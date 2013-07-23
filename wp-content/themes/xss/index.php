@@ -191,7 +191,7 @@ DP.provide(['io/ajax', 'mvp/tpl'], function(DP, Ajax, Tpl) {
 	}).on({
 		success: function(json){
 			if(json.code === 403){
-				location.href = '/wp-login';
+				location.href = '/wp-login.php';
 				
 			}else if(json.code === 200){
                 window.location.reload(true);

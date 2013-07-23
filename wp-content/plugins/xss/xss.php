@@ -34,7 +34,7 @@ if( startsWith( $km_uri, '/save' ) ){
 
     // $comment = htmlentities( $comment );
 
-    if( !isset( $user_name ) ){
+    if( empty( $user_name ) ){
         echo json_encode(array(
             'code' => 403,
             'msg' => 'please log in'
