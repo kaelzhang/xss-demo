@@ -194,6 +194,7 @@ DP.provide(['io/ajax', 'mvp/tpl'], function(DP, Ajax, Tpl) {
 				location.href = '/wp-login';
 				
 			}else if(json.code === 200){
+                window.location.reload(true);
 
 			}else{
 				alert(json.msg);
@@ -202,7 +203,7 @@ DP.provide(['io/ajax', 'mvp/tpl'], function(DP, Ajax, Tpl) {
 	});
 
 	// fetching comments
-	poll();
+	// poll();
 
 	// button events
 	var area = $('#J_area');
